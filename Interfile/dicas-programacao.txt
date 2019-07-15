@@ -1,0 +1,16 @@
+Tdd - Conceito
+https://www.devmedia.com.br/tdd-em-csharp-na-pratica-por-onde-o-projeto-deve-iniciar/28419
+
+Tdd - Tuto Macoratti
+http://www.macoratti.net/15/08/net_mock1.htm
+
+dicas - migrations
+Enable-Migrations: Enables Code First Migrations in a project.
+Add-Migration: Scaffolds a migration script for any pending model changes.
+Update-Database: Applies any pending migrations to the database.
+Get-Migrations: Displays the migrations that have been applied to the target database.
+
+
+################# introducao #################
+POO:
+https://www.devmedia.com.br/csharp-orientado-a-objetos-introducao/29539

@@ -1,0 +1,5 @@
+[migration]
+https://www.devmedia.com.br/entity-framework-core-criando-bases-de-dados-com-migrations/36776
+
+[1 to n]
+http://www.entityframeworktutorial.net/efcore/configure-one-to-many-relationship-using-fluent-api-in-ef-core.aspx

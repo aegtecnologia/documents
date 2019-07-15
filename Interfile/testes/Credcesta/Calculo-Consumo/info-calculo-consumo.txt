@@ -1,0 +1,16 @@
+############## Fabric ########################
+
+Portal:
+https://www.fabric.io/squad-bmax/android/apps/com.maxima/beta/releases/0840bdc3-67c2-4cd4-a8b8-f6a38d0228d3?build_version=4&display_version=3.1
+
+Usuario: email pessoal
+Senha: fabric######
+
+enviar reset vanessa IOS
+
+
+Bruno Fecchio [2:25 PM]
+offline_access corretor.consulta proposta.consulta proposta.emissao portador.consulta portador.desconto_folha
+
+
+http://localhost:54901/identity/account/resetpassword?code=CfDJ8B8mtF7Ekw1Ln2IVkwf%2b1uPdZOwh%2bu38%2b12I4VGGCwNlpghLrbqS7EthzOahdy5tEbC5hZcXjdxC1kFxOUf24v%2brRchmwcn5PYkAhbVewYEki1b1vFNwqMA%2bA0hDlVc8k%2bsDXj%2f5DbkOaJg6%2bqMpr48f09ldrFqDgxLb5lgGX8Z9z7i6uas1FpBoTFAkR7YSVNg5ksBWyTtqojH5wJDvqnEpY4L4RnPUT0MH1WThzKTC

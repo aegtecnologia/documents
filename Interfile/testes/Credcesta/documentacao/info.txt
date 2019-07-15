@@ -1,0 +1,57 @@
+14147
+
+Consiglog envia arquivo via ftp:
+Data: + ou - dia 28;
+Nome: CredCesta (ANO/MES)
+Layout: ?????
+FTP: ?????
+
+Retirar cabeçalho e validar dados;
+Dados: ?????
+
+Processar proc (isso vai gerar arquivo "CredCesta (ANO/MES/DIA)"
+Proc: ?????
+Data: dia 1 ou 2
+
+################# Validações Pos Processamento ##############################
+
+Validar se DADOS CADASTRAIS e INFORMAÇÕES DOS LIMITES estão corretos comparando arquivo de entrada e arquivo de saida.
+
+1 - DADOS CADASTRAIS:
+
+Dados Bancarios, CPF, Situacao Funcional, Matricula, Endereço. 
+
+2 - INFORMAÇÕES DOS LIMITES
+
+Verificar no 6.2 - do documento.
+
+############## Envio do Arquivo Processado e Auditado ######################
+Enviar relatorio para o francisco da conductor (francisco.cousino@credcesta.com.br)
+Aguardar autorizacao do francisco;
+Disponibilizar arquivo para conductor via FTP;
+Informar ao responsavel pela conductor para que processe o arquivo
+
+
+https://ftp13.interfile.com.br/
+User: maxima.ftp
+Senha: NLT70RWT
+
+############# fluxo #####################
+Pega arquivo no FTP;
+if (!Arquivo valido)
+return envia email;
+trata arquivo
+exucuta proc;
+if (!arquivoValido)
+return envia email
+trata arquivo processado
+gera arquivo de entrantes
+gera arquivo de saintes
+return envia email;
+
+Configurações:
+Email para avisos de errros e processamento ok;
+
+Observações:
+FTP sempre o mesmo
+

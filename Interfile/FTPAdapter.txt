@@ -1,0 +1,205 @@
+using System;
+using System.IO;
+using System.Net;
+using System.Linq;
+using System.Collections.Generic;
+using Credcesta.Domain.Interfaces.Jobs.Adapters;
+
+namespace Credcesta.Core.Jobs.Adapters
+{
+    public sealed class FtpAdapter : IFtpAdapter
+    {
+        #region Private Properties
+
+        private FtpConfigure _configure;
+
+        #endregion
+
+        #region Public Methods
+
+        public void Configure(IDictionary<string, object> parameters)
+        {
+            try
+            {
+                if (!TryParse(parameters))
+                    return;
+            }
+            catch (Exception ex) { throw ex; }
+        }
+
+        public object GetData(IDictionary<string, object> parameters)
+        {
+            try
+            {
+                var nomeArquivo = (string)parameters["nomeArquivo"];
+
+                var lista = ListarArquivosDoFTP();
+
+                if (!lista.Contains(nomeArquivo))
+                    throw new Exception($"Arquivo {nomeArquivo} não encontrado");
+
+                return Download(nomeArquivo);
+            }
+            catch (Exception ex) { throw ex; }
+        }
+
+        public bool SendData(object data, IDictionary<string, object> parameters)
+        {
+            try
+            {
+                var arquivo = (string)parameters["arquivo"];
+                var nomeArquivo = (string)parameters["nomeArquivo"];
+
+                var uri = $@"{_configure.Host}:{_configure.Porta.ToString()}/{nomeArquivo}";
+                FileInfo arquivoInfo = new FileInfo(arquivo);
+
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(uri);
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+                request.Credentials = new NetworkCredential(_configure.Usuario, _configure.Senha);
+                request.UseBinary = true;
+                request.ContentLength = arquivoInfo.Length;
+                using (FileStream fs = arquivoInfo.OpenRead())
+                {
+                    byte[] buffer = new byte[2048];
+                    int bytesSent = 0;
+                    int bytes = 0;
+                    using (Stream stream = request.GetRequestStream())
+                    {
+                        while (bytesSent < arquivoInfo.Length)
+                        {
+                            bytes = fs.Read(buffer, 0, buffer.Length);
+                            stream.Write(buffer, 0, bytes);
+                            bytesSent += bytes;
+                        }
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+    
+        #endregion
+
+        #region Private Methods
+
+        private IList<string> ListarArquivosDoFTP()
+        {
+            string[] lista;
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(_configure.Host);
+            request.Method = WebRequestMethods.Ftp.ListDirectory;
+            request.Credentials = new NetworkCredential(_configure.Usuario, _configure.Senha);
+            request.UsePassive = true;
+            request.UseBinary = true;
+            request.KeepAlive = true;
+
+            using (FtpWebResponse response = (FtpWebResponse)request.GetResponse())
+            {
+                Stream responseStream = response.GetResponseStream();
+                using (StreamReader reader = new StreamReader(responseStream))
+                {
+                    lista = reader.ReadToEnd().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                }
+            }
+
+            return lista.ToList<string>();
+        }
+
+        private MemoryStream Download(string arquivoOrigem)
+        {
+            var uri = $@"{_configure.Host}:{_configure.Porta.ToString()}/{arquivoOrigem}";
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(uri);
+
+            request.Method = WebRequestMethods.Ftp.DownloadFile;
+            request.Credentials = new NetworkCredential(_configure.Usuario, _configure.Senha);
+            request.UsePassive = true;
+            request.UseBinary = true;
+            request.KeepAlive = true;
+
+            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+
+            var responseStream = response.GetResponseStream();
+
+            byte[] buffer = new byte[1024];
+            
+            MemoryStream newFile = new MemoryStream();
+            
+            int readCount = responseStream.Read(buffer, 0, buffer.Length);
+            while (readCount > 0)
+            {
+                newFile.Write(buffer, 0, readCount);
+                readCount = responseStream.Read(buffer, 0, buffer.Length);
+            }
+            
+            responseStream.Close();
+            response.Close();
+
+            return newFile;
+        }
+
+        private void DownloadV1(string arquivoOrigem, string hostDestino)
+        {
+            var uri = $@"{_configure.Host}:{_configure.Porta.ToString()}/{arquivoOrigem}";
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(uri);
+
+            request.Method = WebRequestMethods.Ftp.DownloadFile;
+            request.Credentials = new NetworkCredential(_configure.Usuario, _configure.Senha);
+            request.UsePassive = true;
+            request.UseBinary = true;
+            request.KeepAlive = true;
+
+            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+
+            var responseStream = response.GetResponseStream();
+
+            byte[] buffer = new byte[200000];
+
+            var newFile = new FileStream($@"{hostDestino}/{arquivoOrigem}", FileMode.Create);
+            //Ler o arquivo de origem
+            int readCount = responseStream.Read(buffer, 0, buffer.Length);
+            while (readCount > 0)
+            {
+                //Escrever o arquivo
+                newFile.Write(buffer, 0, readCount);
+                readCount = responseStream.Read(buffer, 0, buffer.Length);
+            }
+
+            newFile.Close();
+            responseStream.Close();
+            response.Close();
+        }
+
+        private bool TryParse(IDictionary<string, object> parameters)
+        {
+            if (parameters == null || !parameters.Any())
+                throw new ArgumentNullException(nameof(parameters));
+
+            _configure = new FtpConfigure()
+            {
+                Host = parameters["host"] == null ? "" : parameters["host"].ToString(),
+                Porta = parameters["porta"] == null ? 0 : (int)parameters["porta"],
+                Senha = parameters["senha"] == null ? "" : parameters["senha"].ToString(),
+                Usuario = parameters["usuario"] == null ? "" : parameters["usuario"].ToString(),
+            };
+
+            return true;
+        }
+
+        #endregion
+
+        #region Internal Class
+
+        internal sealed class FtpConfigure
+        {
+            public string Host { get; set; }
+            public int Porta { get; set; }
+            public string Usuario { get; set; }
+            public string Senha { get; set; }
+        }
+
+        #endregion
+    }
+}
