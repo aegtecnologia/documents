@@ -2,6 +2,7 @@
 git fetch origin
 git remote prune origin
 git checkout [branch]
+git push -u origin [branch]
 
 [dica cron]
 https://crontab.guru/	
@@ -20,13 +21,13 @@ https://grupopasquali.basecamphq.com/projects/14194504-atividades-gerais-desenvo
 
 
 [Rede]
-User: anderson.ferreira-cs
-Senha: inter@2019
+User: anderson.ferreira
+Senha: inter@####
 
 [Jira]
 https://jira.interfile.com.br/secure/WelcomeToJIRA.jspa
 User: anderson.ferreira
-Senha: jira808513
+Senha: git??????
 
 
 Repositório de fontes GIT
@@ -42,8 +43,5 @@ https://jira.interfile.com.br/secure/RapidBoard.jspa?projectKey=BM
 c# entidade filha
 https://blog.rsuter.com/asp-net-mvc-how-to-implement-an-edit-form-for-an-entity-with-a-sortable-child-collection/
 
-git fetch origin
-git remote prune origin
-git checkout [branch] 
 
 https://support.microsoft.com/en-us/help/3136780/utf-8-encoding-support-for-the-bcp-utility-and-bulk-insert-transact-sq

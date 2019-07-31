@@ -1,0 +1,7 @@
+referencias:
+https://www.devmedia.com.br/entity-framework-core-criando-bases-de-dados-com-migrations/36776
+https://medium.com/@speedforcerun/implementing-idesigntimedbcontextfactory-in-asp-net-core-2-0-2-1-3718bba6db84
+
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
