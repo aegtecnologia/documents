@@ -1,0 +1,10 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.integra.sascar.com.br/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <ws:obterMacroTd40>
+      <usuario>@usuario</usuario>
+      <senha>@senha</senha>
+      <satelital>@satelital</satelital>
+    </ws:obterMacroTd40>
+  </soapenv:Body>
+</soapenv:Envelope>

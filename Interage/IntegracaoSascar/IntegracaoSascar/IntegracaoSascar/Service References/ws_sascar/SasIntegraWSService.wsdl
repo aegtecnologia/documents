@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservice.web.integracao.sascar.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SasIntegraWSService" targetNamespace="http://webservice.web.integracao.sascar.com.br/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://sasintegra.sascar.com.br:80/SasIntegra/SasIntegraWSService?xsd=1" namespace="http://webservice.web.integracao.sascar.com.br/" />
+    </xsd:schema>
+  </types>
+  <message name="atualizarSenha">
+    <part name="parameters" element="tns:atualizarSenha" />
+  </message>
+  <message name="atualizarSenhaResponse">
+    <part name="parameters" element="tns:atualizarSenhaResponse" />
+  </message>
+  <message name="SasIntegraNotification">
+    <part name="fault" element="tns:SasIntegraFault" />
+  </message>
+  <message name="obterClientes">
+    <part name="parameters" element="tns:obterClientes" />
+  </message>
+  <message name="obterClientesResponse">
+    <part name="parameters" element="tns:obterClientesResponse" />
+  </message>
+  <message name="obterMotoristas">
+    <part name="parameters" element="tns:obterMotoristas" />
+  </message>
+  <message name="obterMotoristasResponse">
+    <part name="parameters" element="tns:obterMotoristasResponse" />
+  </message>
+  <message name="obterMotoristasVeiculos">
+    <part name="parameters" element="tns:obterMotoristasVeiculos" />
+  </message>
+  <message name="obterMotoristasVeiculosResponse">
+    <part name="parameters" element="tns:obterMotoristasVeiculosResponse" />
+  </message>
+  <message name="obterLayoutTecladoVeiculos">
+    <part name="parameters" element="tns:obterLayoutTecladoVeiculos" />
+  </message>
+  <message name="obterLayoutTecladoVeiculosResponse">
+    <part name="parameters" element="tns:obterLayoutTecladoVeiculosResponse" />
+  </message>
+  <message name="obterLayoutGrupoPontos">
+    <part name="parameters" element="tns:obterLayoutGrupoPontos" />
+  </message>
+  <message name="obterLayoutGrupoPontosResponse">
+    <part name="parameters" element="tns:obterLayoutGrupoPontosResponse" />
+  </message>
+  <message name="obterGrupoAtuadores">
+    <part name="parameters" element="tns:obterGrupoAtuadores" />
+  </message>
+  <message name="obterGrupoAtuadoresResponse">
+    <part name="parameters" element="tns:obterGrupoAtuadoresResponse" />
+  </message>
+  <message name="obterStatusComando">
+    <part name="parameters" element="tns:obterStatusComando" />
+  </message>
+  <message name="obterStatusComandoResponse">
+    <part name="parameters" element="tns:obterStatusComandoResponse" />
+  </message>
+  <message name="obterTipoComando">
+    <part name="parameters" element="tns:obterTipoComando" />
+  </message>
+  <message name="obterTipoComandoResponse">
+    <part name="parameters" element="tns:obterTipoComandoResponse" />
+  </message>
+  <message name="obterPacotePosicoes">
+    <part name="parameters" element="tns:obterPacotePosicoes" />
+  </message>
+  <message name="obterPacotePosicoesResponse">
+    <part name="parameters" element="tns:obterPacotePosicoesResponse" />
+  </message>
+  <message name="obterPacotePosicaoPorRange">
+    <part name="parameters" element="tns:obterPacotePosicaoPorRange" />
+  </message>
+  <message name="obterPacotePosicaoPorRangeResponse">
+    <part name="parameters" element="tns:obterPacotePosicaoPorRangeResponse" />
+  </message>
+  <message name="obterPacotePosicaoHistorico">
+    <part name="parameters" element="tns:obterPacotePosicaoHistorico" />
+  </message>
+  <message name="obterPacotePosicaoHistoricoResponse">
+    <part name="parameters" element="tns:obterPacotePosicaoHistoricoResponse" />
+  </message>
+  <message name="obterPacoteLocalizacao">
+    <part name="parameters" element="tns:obterPacoteLocalizacao" />
+  </message>
+  <message name="obterPacoteLocalizacaoResponse">
+    <part name="parameters" element="tns:obterPacoteLocalizacaoResponse" />
+  </message>
+  <message name="obterMacroTd50Tmcd">
+    <part name="parameters" element="tns:obterMacroTd50Tmcd" />
+  </message>
+  <message name="obterMacroTd50TmcdResponse">
+    <part name="parameters" element="tns:obterMacroTd50TmcdResponse" />
+  </message>
+  <message name="obterMacroTd50TmcdDetalhado">
+    <part name="parameters" element="tns:obterMacroTd50TmcdDetalhado" />
+  </message>
+  <message name="obterMacroTd50TmcdDetalhadoResponse">
+    <part name="parameters" element="tns:obterMacroTd50TmcdDetalhadoResponse" />
+  </message>
+  <message name="obterMacroTd40">
+    <part name="parameters" element="tns:obterMacroTd40" />
+  </message>
+  <message name="obterMacroTd40Response">
+    <part name="parameters" element="tns:obterMacroTd40Response" />
+  </message>
+  <message name="obterMacroTms3">
+    <part name="parameters" element="tns:obterMacroTms3" />
+  </message>
+  <message name="obterMacroTms3Response">
+    <part name="parameters" element="tns:obterMacroTms3Response" />
+  </message>
+  <message name="obterMascaraDispositivos">
+    <part name="parameters" element="tns:obterMascaraDispositivos" />
+  </message>
+  <message name="obterMascaraDispositivosResponse">
+    <part name="parameters" element="tns:obterMascaraDispositivosResponse" />
+  </message>
+  <message name="obterLayout">
+    <part name="parameters" element="tns:obterLayout" />
+  </message>
+  <message name="obterLayoutResponse">
+    <part name="parameters" element="tns:obterLayoutResponse" />
+  </message>
+  <message name="obterLayoutDetalhado">
+    <part name="parameters" element="tns:obterLayoutDetalhado" />
+  </message>
+  <message name="obterLayoutDetalhadoResponse">
+    <part name="parameters" element="tns:obterLayoutDetalhadoResponse" />
+  </message>
+  <message name="obterVeiculos">
+    <part name="parameters" element="tns:obterVeiculos" />
+  </message>
+  <message name="obterVeiculosResponse">
+    <part name="parameters" element="tns:obterVeiculosResponse" />
+  </message>
+  <message name="obterPontosReferencia">
+    <part name="parameters" element="tns:obterPontosReferencia" />
+  </message>
+  <message name="obterPontosReferenciaResponse">
+    <part name="parameters" element="tns:obterPontosReferenciaResponse" />
+  </message>
+  <message name="obterSequenciamentoEvento">
+    <part name="parameters" element="tns:obterSequenciamentoEvento" />
+  </message>
+  <message name="obterSequenciamentoEventoResponse">
+    <part name="parameters" element="tns:obterSequenciamentoEventoResponse" />
+  </message>
+  <message name="obterMensagemPortal">
+    <part name="parameters" element="tns:obterMensagemPortal" />
+  </message>
+  <message name="obterMensagemPortalResponse">
+    <part name="parameters" element="tns:obterMensagemPortalResponse" />
+  </message>
+  <message name="obterTelemetriaPortal">
+    <part name="parameters" element="tns:obterTelemetriaPortal" />
+  </message>
+  <message name="obterTelemetriaPortalResponse">
+    <part name="parameters" element="tns:obterTelemetriaPortalResponse" />
+  </message>
+  <message name="obterEnderecoPosicao">
+    <part name="parameters" element="tns:obterEnderecoPosicao" />
+  </message>
+  <message name="obterEnderecoPosicaoResponse">
+    <part name="parameters" element="tns:obterEnderecoPosicaoResponse" />
+  </message>
+  <message name="verificarVeiculoIntegrado">
+    <part name="parameters" element="tns:verificarVeiculoIntegrado" />
+  </message>
+  <message name="verificarVeiculoIntegradoResponse">
+    <part name="parameters" element="tns:verificarVeiculoIntegradoResponse" />
+  </message>
+  <message name="obterLayoutAcaoEmbarcadaAVD">
+    <part name="parameters" element="tns:obterLayoutAcaoEmbarcadaAVD" />
+  </message>
+  <message name="obterLayoutAcaoEmbarcadaAVDResponse">
+    <part name="parameters" element="tns:obterLayoutAcaoEmbarcadaAVDResponse" />
+  </message>
+  <portType name="SasIntegraWS">
+    <operation name="atualizarSenha">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/atualizarSenhaRequest" message="tns:atualizarSenha" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/atualizarSenhaResponse" message="tns:atualizarSenhaResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/atualizarSenha/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterClientes">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterClientesRequest" message="tns:obterClientes" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterClientesResponse" message="tns:obterClientesResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterClientes/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterMotoristas">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasRequest" message="tns:obterMotoristas" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasResponse" message="tns:obterMotoristasResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristas/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterMotoristasVeiculos">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasVeiculosRequest" message="tns:obterMotoristasVeiculos" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasVeiculosResponse" message="tns:obterMotoristasVeiculosResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasVeiculos/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterLayoutTecladoVeiculos">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutTecladoVeiculosRequest" message="tns:obterLayoutTecladoVeiculos" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutTecladoVeiculosResponse" message="tns:obterLayoutTecladoVeiculosResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutTecladoVeiculos/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterLayoutGrupoPontos">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutGrupoPontosRequest" message="tns:obterLayoutGrupoPontos" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutGrupoPontosResponse" message="tns:obterLayoutGrupoPontosResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutGrupoPontos/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterGrupoAtuadores">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterGrupoAtuadoresRequest" message="tns:obterGrupoAtuadores" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterGrupoAtuadoresResponse" message="tns:obterGrupoAtuadoresResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterGrupoAtuadores/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterStatusComando">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoRequest" message="tns:obterStatusComando" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoResponse" message="tns:obterStatusComandoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComando/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterTipoComando">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTipoComandoRequest" message="tns:obterTipoComando" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTipoComandoResponse" message="tns:obterTipoComandoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTipoComando/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterPacotePosicoes">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRequest" message="tns:obterPacotePosicoes" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesResponse" message="tns:obterPacotePosicoesResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoes/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterPacotePosicaoPorRange">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPorRangeRequest" message="tns:obterPacotePosicaoPorRange" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPorRangeResponse" message="tns:obterPacotePosicaoPorRangeResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPorRange/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterPacotePosicaoHistorico">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoHistoricoRequest" message="tns:obterPacotePosicaoHistorico" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoHistoricoResponse" message="tns:obterPacotePosicaoHistoricoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoHistorico/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterPacoteLocalizacao">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteLocalizacaoRequest" message="tns:obterPacoteLocalizacao" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteLocalizacaoResponse" message="tns:obterPacoteLocalizacaoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteLocalizacao/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterMacroTd50Tmcd">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdRequest" message="tns:obterMacroTd50Tmcd" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdResponse" message="tns:obterMacroTd50TmcdResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50Tmcd/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterMacroTd50TmcdDetalhado">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdDetalhadoRequest" message="tns:obterMacroTd50TmcdDetalhado" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdDetalhadoResponse" message="tns:obterMacroTd50TmcdDetalhadoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdDetalhado/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterMacroTd40">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd40Request" message="tns:obterMacroTd40" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd40Response" message="tns:obterMacroTd40Response" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd40/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterMacroTms3">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTms3Request" message="tns:obterMacroTms3" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTms3Response" message="tns:obterMacroTms3Response" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTms3/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterMascaraDispositivos">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMascaraDispositivosRequest" message="tns:obterMascaraDispositivos" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMascaraDispositivosResponse" message="tns:obterMascaraDispositivosResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMascaraDispositivos/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterLayout">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutRequest" message="tns:obterLayout" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutResponse" message="tns:obterLayoutResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayout/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterLayoutDetalhado">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDetalhadoRequest" message="tns:obterLayoutDetalhado" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDetalhadoResponse" message="tns:obterLayoutDetalhadoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDetalhado/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterVeiculos">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosRequest" message="tns:obterVeiculos" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosResponse" message="tns:obterVeiculosResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculos/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterPontosReferencia">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPontosReferenciaRequest" message="tns:obterPontosReferencia" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPontosReferenciaResponse" message="tns:obterPontosReferenciaResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPontosReferencia/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterSequenciamentoEvento">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterSequenciamentoEventoRequest" message="tns:obterSequenciamentoEvento" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterSequenciamentoEventoResponse" message="tns:obterSequenciamentoEventoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterSequenciamentoEvento/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterMensagemPortal">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMensagemPortalRequest" message="tns:obterMensagemPortal" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMensagemPortalResponse" message="tns:obterMensagemPortalResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMensagemPortal/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterTelemetriaPortal">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTelemetriaPortalRequest" message="tns:obterTelemetriaPortal" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTelemetriaPortalResponse" message="tns:obterTelemetriaPortalResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTelemetriaPortal/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterEnderecoPosicao">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEnderecoPosicaoRequest" message="tns:obterEnderecoPosicao" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEnderecoPosicaoResponse" message="tns:obterEnderecoPosicaoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEnderecoPosicao/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="verificarVeiculoIntegrado">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/verificarVeiculoIntegradoRequest" message="tns:verificarVeiculoIntegrado" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/verificarVeiculoIntegradoResponse" message="tns:verificarVeiculoIntegradoResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/verificarVeiculoIntegrado/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+    <operation name="obterLayoutAcaoEmbarcadaAVD">
+      <input wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAcaoEmbarcadaAVDRequest" message="tns:obterLayoutAcaoEmbarcadaAVD" />
+      <output wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAcaoEmbarcadaAVDResponse" message="tns:obterLayoutAcaoEmbarcadaAVDResponse" />
+      <fault wsam:Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAcaoEmbarcadaAVD/Fault/SasIntegraNotification" name="SasIntegraNotification" message="tns:SasIntegraNotification" />
+    </operation>
+  </portType>
+  <binding name="SasIntegraWSPortBinding" type="tns:SasIntegraWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="atualizarSenha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterClientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterMotoristas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterMotoristasVeiculos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterLayoutTecladoVeiculos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterLayoutGrupoPontos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterGrupoAtuadores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterStatusComando">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterTipoComando">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterPacotePosicoes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterPacotePosicaoPorRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterPacotePosicaoHistorico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterPacoteLocalizacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterMacroTd50Tmcd">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterMacroTd50TmcdDetalhado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterMacroTd40">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterMacroTms3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterMascaraDispositivos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterLayout">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterLayoutDetalhado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterVeiculos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterPontosReferencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterSequenciamentoEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterMensagemPortal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterTelemetriaPortal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterEnderecoPosicao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="verificarVeiculoIntegrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obterLayoutAcaoEmbarcadaAVD">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SasIntegraNotification">
+        <soap:fault use="literal" name="SasIntegraNotification" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="SasIntegraWSService">
+    <port name="SasIntegraWSPort" binding="tns:SasIntegraWSPortBinding">
+      <soap:address location="http://sasintegra.sascar.com.br:80/SasIntegra/SasIntegraWSService" />
+    </port>
+  </service>
+</definitions>

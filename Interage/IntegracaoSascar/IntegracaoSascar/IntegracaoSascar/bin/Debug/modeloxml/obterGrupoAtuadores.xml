@@ -1,0 +1,11 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.integra.sascar.com.br/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <ws:obterGrupoAtuadores>
+      <!--Optional:-->
+      <usuario>@usuario</usuario>
+      <!--Optional:-->
+      <senha>@senha</senha>
+    </ws:obterGrupoAtuadores>
+  </soapenv:Body>
+</soapenv:Envelope>

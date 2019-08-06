@@ -1,0 +1,14 @@
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\bin\Debug\IntegracaoSascar.exe.config
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\bin\Debug\IntegracaoSascar.exe
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\bin\Debug\IntegracaoSascar.pdb
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\bin\Debug\IntegracaoSascar.xml
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.Form1.resources
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.Resources.resources
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.vbproj.GenerateResource.Cache
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.exe
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.xml
+C:\Marco Antonio\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.pdb
+C:\Projetos\DNA\Desenvolvimento\Integrador\Fontes\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\bin\Debug\IntegracaoSascar.exe.config
+C:\Projetos\DNA\Desenvolvimento\Integrador\Fontes\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.exe
+C:\Projetos\DNA\Desenvolvimento\Integrador\Fontes\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.xml
+C:\Projetos\DNA\Desenvolvimento\Integrador\Fontes\IntegracaoSascar\IntegracaoSascar\IntegracaoSascar\obj\Debug\IntegracaoSascar.pdb

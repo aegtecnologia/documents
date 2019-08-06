@@ -1,0 +1,14 @@
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\bin\Debug\IntegracaoJabur.exe.config
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\bin\Debug\IntegracaoJabur.exe
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\bin\Debug\IntegracaoJabur.pdb
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\bin\Debug\IntegracaoJabur.xml
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\obj\Debug\IntegracaoJabur.Form1.resources
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\obj\Debug\IntegracaoJabur.Resources.resources
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\obj\Debug\IntegracaoJabur.vbproj.GenerateResource.Cache
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\obj\Debug\IntegracaoJabur.exe
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\obj\Debug\IntegracaoJabur.xml
+C:\Users\marco.oliveira\AppData\Local\Temporary Projects\IntegracaoJabur\obj\Debug\IntegracaoJabur.pdb
+C:\Marco Antonio\IntegracaoJabur\IntegracaoJabur\IntegracaoJabur\bin\Debug\IntegracaoJabur.exe.config
+C:\Marco Antonio\IntegracaoJabur\IntegracaoJabur\IntegracaoJabur\obj\Debug\IntegracaoJabur.exe
+C:\Marco Antonio\IntegracaoJabur\IntegracaoJabur\IntegracaoJabur\obj\Debug\IntegracaoJabur.xml
+C:\Marco Antonio\IntegracaoJabur\IntegracaoJabur\IntegracaoJabur\obj\Debug\IntegracaoJabur.pdb

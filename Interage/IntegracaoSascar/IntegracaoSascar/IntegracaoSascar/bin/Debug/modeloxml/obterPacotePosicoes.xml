@@ -1,0 +1,10 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.web.integracao.sascar.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:obterPacotePosicoes>
+         <usuario>@usuario</usuario>
+         <senha>@senha</senha>
+         <quantidade>@quantidade</quantidade>
+      </web:obterPacotePosicoes>
+   </soapenv:Body>
+</soapenv:Envelope>
