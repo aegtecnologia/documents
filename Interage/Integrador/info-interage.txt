@@ -1,0 +1,7 @@
+usaurio: anderson.ferreira
+senha: Dna@2019
+mtsc: 200.170.197.173:3406
+
+usuario: sa
+senha: as1
+banco: InterageGR
