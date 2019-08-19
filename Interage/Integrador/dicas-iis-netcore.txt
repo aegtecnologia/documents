@@ -1,4 +1,19 @@
+comandos:
+net stop was /y
+net start w3svc
+dotnet --version
+dotnet --list-sdks
+dotnet --list-runtimes
+
 referencias:
 
 https://medium.com/@alexalves_85598/publicando-aplica%C3%A7%C3%A3o-net-core-no-iss-f4079c2f312
+
 https://docs.microsoft.com/pt-br/aspnet/core/host-and-deploy/iis/?view=aspnetcore-2.2
+
+https://github.com/dotnet/core/blob/master/release-notes/download-archives/2.1.1-download.md
+
+https://docs.microsoft.com/en-us/dotnet/core/versions/remove-runtime-sdk-versions
+
+bugs
+https://www.nopcommerce.com/boards/t/54948/an-error-occurred-while-starting-the-application-nopcommerce-41-iis.aspx
