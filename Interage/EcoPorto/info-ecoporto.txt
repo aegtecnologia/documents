@@ -1,0 +1,17 @@
+PROCESSOS: Redex SM Automatizada
+
+Portal- Cadastro de pre-sm (Embarcador, Transportador);
+API - Receber dados (CNPJ, CPF, Veiculo, Destino e Servico);
+API - Receber dados (Complemento e Inicio de viagem);
+Robo - Identificar entrada no Operador via poligono (e encerrar a viagem);
+Robo - Enviar encerramento de viagem a Ecoporto;
+
+PROCESSOS: GMCI_ELETRONICA
+
+API - RECEBER LISTA DE CONTEINERES
+ROBO - IDENTIFICAR SAIDA DO OPERADOR VIA POLIGONO
+ROBO - AGUARDAR ENTRADA NA ECOPORTO
+API - RECEBER DADOS PARA CRIAR SM COMPLETA
+API - RECEBER ENCERRAMENTO DE VIAGEM
+
+
