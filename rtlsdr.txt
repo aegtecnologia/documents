@@ -1,0 +1,5 @@
+rtl sdr
+https://www.youtube.com/watch?v=LE1CvGWqSsw
+
+https://github.com/SensorsIot/Garage-Door-Opener/blob/master/Garage_Door_Opener.ino
+
