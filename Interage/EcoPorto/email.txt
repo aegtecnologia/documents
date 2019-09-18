@@ -1,0 +1,151 @@
+Boa tarde,
+
+Segue os fluxos  nas imagens e  no arquivo .zip  que está publicado na web(abra o arquivo default.tm)
+
+
+Rotinas a serem desenvolvidas:
+- Geração de envio de e-mail para casos de abertura de SM TRA , onde haja qualquer não conformidade com o cadastro do conjunto e motorista
+- API para consulta das posições de geolocalização da viagem do conjunto: cavalo/carreta/transportadora/motorista/contêiner/serviço(TRA ou Redex) com  as  ocorrências geradas no trajeto
+- API e Https request abaixo para integrações entre sistemas
+
+TRA
+1-Envio de Programação dos Conteineres TRA  Ecoporto para Gerenciadora
+Tipo:HTTP Request
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="ecoporto_chronos">
+                            <soapenv:Header/>
+                            <soapenv:Body>
+                            <ns:GeraProgramacao soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                            <Usuario xsi:type="xsd:string">ecoporto_chronos</Usuario>
+                            <Senha xsi:type="xsd:string">xxxxx</Senha>
+                            <Container xsi:type="xsd:string">CAIU4838375</Container>
+                            <CodOrigem xsi:type="xsd:long">811</CodOrigem>
+                            <NomeOrigem xsi:type="xsd:string">TECON 1 - SANTOS-BRASIL</NomeOrigem>
+                            <CodDestino xsi:type="xsd:long">37</CodDestino>
+                            <NomeDestino xsi:type="xsd:string">TERMARES</NomeDestino>
+                            </ns:GeraProgramacao>
+                            </soapenv:Body>
+                            </soapenv:Envelope>
+
+
+
+
+2-Envio de criação de SM  TRA Ecoporto para Gerenciadora
+Valores que não foram informados será enviado nulo
+Tipo:API
+POST /ecoporto-api/json/viagem/register HTTP/1.1
+Content-Type: application/json
+Authorization: Basic dGVzdDpANTV3MHJk
+Accept: */*
+Cache-Control: no-cache
+accept-encoding: gzip, deflate
+{"operacao_id":"31268", à FIXO CODIGO FIXO PARA O SERVIÇO DO TRA
+"tipo_viagem":"",
+"percurso" RODOVIÁRIO ",àFIXO
+"rastreada":"S",àFIXO
+"mercadoria_ou_produto_id":"",
+"valor_embarque":"",
+"codigo_liberacao":"",
+"numero_transporte":" CONTEINER ",
+"origem_ID": "810",
+"inicio_previsto_data":"04072019", 
+"inicio_previsto_hora":"17:18:27", 
+"inicio_real_data":"05072019", 
+"inicio_real_hora":"17:18:35",à 
+"destino_ID": "010", àCODIGO DO RECINTO DO CONTEINER 
+"fim_previsto_data":"04072019", 
+"fim_previsto_hora":"17:18:27", 
+"fim_real_data":"",
+"fim_real_hora":"",
+"transportador_cnpj":"01544197000516", àCNPJ DA TRANSPORTADORA
+"motorista_cpf":"02756605328",àCPF MOTORISTA
+"motorista2_cpf":"",
+"placa": "FJP7057", àCAVALO
+"placa1" FJP7000"", àCARRETA
+"placa2":"",
+"placa3":"",
+"rota_id":"",
+"rota_descricao":"",
+"rota":"",
+}
+Retorno
+{
+"error": false,
+"msg_error": "",
+"rowCount": 0
+"viagem_id": "217615"
+}
+
+
+3-Envio de termino de viagem de SM  TRA Ecoporto para Gerenciadora
+Tipo:HTTP Request
+
+       <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="ecoporto_chronos">
+                    <soapenv:Header/>
+                    <soapenv:Body>
+                    <ns:FinalizaMonitor soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                    <Usuario xsi:type="xsd:string">ecoporto_chronos</Usuario>
+                    <Senha xsi:type="xsd:string">xxxxxx</Senha>l
+                    <TransportadorCnpj xsi:type="xsd:long">12014047000193</TransportadorCnpj>
+                    <Container xsi:type="xsd:string">CAIU4838375</Container>
+                    <CodOrigem xsi:type="xsd:long">811</CodOrigem>
+                    <DataHora xsi:type="xsd:long">20190314155700</DataHora>
+                    </ns:FinalizaMonitor>
+                    </soapenv:Body>
+                    </soapenv:Envelope>
+                    
+
+
+NOME DO METODO : FINALIZA_MONITOR_TRA
+   
+   VARIAVEIS :                    CAMPO                               TIPO                         OBRIGATORIO              EXEMPLO
+                                                               ----------------------------------------------------------------------------
+                                                               Container                           ALFANUMERICO(11)                      S                             MSKU1234567
+                                                               CodOrigem                        NUMERICO(3)                  S                             211
+                                                               DataHora                            NUMERICO(14)                S                             20180419125959 (AAAAMMDDHHNNSS)                
+
+                               
+
+REDEX 
+1-Realizar consulta de SM criada para CPF + Placa +CNPJ+ Servico Redex((Código do serviço Redex 31269).  Ecoporto para Gerenciadora
+Tipo: API
+/json/viagens/search?cpf=11122233344&cnpj=10772292000134&placa=BWW0000&operação_id=31269
+
+2-Realizar Inicio de Viagem de uma SM já existente  Ecoporto para Gerenciadora
+Tipo: HTTP Request
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://35.188.222.63">
+                            <soapenv:Header/>
+                            <soapenv:Body>
+                            <ns:IniciaViagem soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                            <Usuario xsi:type="xsd:string">ecoporto_chronos</Usuario>
+                            <Senha xsi:type="xsd:string">xxx!P21</Senha>
+                            <Container xsi:type="xsd:string">TCLU4184563</Container>
+                            <Cavalo xsi:type="xsd:string">LNL0354</Cavalo>
+                            <Carreta xsi:type="xsd:string">FYK7220</Carreta>
+                            <TransportadoraCNPJ xsi:type="xsd:long">01896217000194</TransportadoraCNPJ>
+                            <CPFMotorista xsi:type="xsd:long">22027142860</CPFMotorista>
+                            <Contato xsi:type="xsd:string"></Contato>
+                            <CodOrigem xsi:type="xsd:long">11</CodOrigem>
+                            <DataHora xsi:type="xsd:long">20171201061000</DataHora>
+                            </ns:IniciaViagem>
+                            </soapenv:Body>
+                            </soapenv:Envelope>
+
+3- Receber  da Gerenciadora Término de Viagem do Redex  Gerenciadora para Ecoporto 
+
+Tipo: HTTP Request
+
+NOME DO METODO : FINALIZA_VIAGEM_RDX (CHAVE - Container, PlacaCavalo, PlacaCarreta )
+                
+                VARIAVEIS :                       CAMPO                               TIPO                                      OBRIGATORIO                  EXEMPLO
+                                                               ----------------------------------------------------------------------------
+                                                               Container                           ALFANUMERICO(11)      S                             HASU8529647
+                                                               PlacaCavalo                       ALFANUMERICO(7)                       S                             EXP4037
+                                                               PlacaCarreta                     ALFANUMERICO(7)                       S                             RDX5426
+                                                               DataHora                            NUMERICO(14)                S                             20180419134522 (AAAAMMDDHHNNSS)                                               
+                
+                
+                 RETORNO POSITIVO = "1"
+                RETORNO NEGATIVO ="0CRITICA" - EXEMPLO "0CONTEINER INVALIDO", "0DATA INVALIDA", "0VIAGEM NAO INICIADA"
+
+
+Att,

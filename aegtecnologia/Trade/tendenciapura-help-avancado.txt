@@ -1,0 +1,43 @@
+study(title="Tendencia Pura Compra/Venda Avançado", shorttitle="Tendencia Pura EMAS Avançado - MrBob", overlay=false)
+
+//media 17
+len = input(17, minval=1, title="Periodo")
+src = input(close, title="Source")
+out = ema(src, len)
+
+//media 72
+len1 = input(72, minval=1, title="Periodo")
+src1 = input(close, title="Source")
+out1 = ema(src1, len1)
+
+//media 305
+len2 = input(305, minval=1, title="Periodo")
+src2 = input(close, title="Source")
+out2 = ema(src2, len2)
+
+plot(open > out and open > out1 and open > out2 and close > out and close > out1 and close > out2, title="Compra Pura", style=columns, color=lime)
+
+plot(open > out and open > out1 and open < out2 and close > out and close > out1 and close > out2, title="Possível Alteração Compra", style=columns, color=white)
+plot(open > out and open < out1 and open > out2 and close > out and close > out1 and close > out2, title="Possível Alteração Compra 1", style=columns, color=white)
+plot(open < out and open > out1 and open > out2 and close > out and close > out1 and close > out2, title="Possível Alteração Compra 2", style=columns, color=white)
+plot(open < out and open < out1 and open > out2 and close > out and close > out1 and close > out2, title="Possível Alteração Compra 3", style=columns, color=white)
+plot(open < out and open > out1 and open < out2 and close > out and close > out1 and close > out2, title="Possível Alteração Compra 4", style=columns, color=white)
+plot(open > out and open < out1 and open < out2 and close > out and close > out1 and close > out2, title="Possível Alteração Compra 5", style=columns, color=white)
+plot(open < out and open > out1 and open < out2 and close > out and close > out1 and close > out2, title="Possível Alteração Compra 6", style=columns, color=white)
+plot(open < out and open < out1 and open < out2 and close > out and close > out1 and close > out2, title="Possível Alteração Compra 7", style=columns, color=white)
+
+plot(open < out and open < out1 and open < out2 and close < out and close < out1 and close < out2, title="Venda Pura", style=columns, color=red)
+
+plot(open < out and open < out1 and open > out2 and close < out and close < out1 and close < out2, title="Possível Alteração Venda", style=columns, color=yellow)
+plot(open < out and open > out1 and open < out2 and close < out and close < out1 and close < out2, title="Possível Alteração Venda 1", style=columns, color=yellow)
+plot(open > out and open < out1 and open < out2 and close < out and close < out1 and close < out2, title="Possível Alteração Venda 2", style=columns, color=yellow)
+plot(open > out and open > out1 and open < out2 and close < out and close < out1 and close < out2, title="Possível Alteração Venda 3", style=columns, color=yellow)
+plot(open > out and open < out1 and open < out2 and close < out and close < out1 and close < out2, title="Possível Alteração Venda 4", style=columns, color=yellow)
+plot(open < out and open > out1 and open > out2 and close < out and close < out1 and close < out2, title="Possível Alteração Venda 5", style=columns, color=yellow)
+plot(open > out and open < out1 and open > out2 and close < out and close < out1 and close < out2, title="Possível Alteração Venda 6", style=columns, color=yellow)
+plot(open > out and open > out1 and open > out2 and close < out and close < out1 and close < out2, title="Possível Alteração Venda 7", style=columns, color=yellow)
+
+
+plot(close <= out and close >= out1 and close >= out2 or close >= out and close <= out1 and close <= out2, title="Consolidação Pequena", style=columns, color=fuchsia)
+plot(close >= out and close <= out1 and close >= out2 or close <= out and close >= out1 and close <= out2 , title="Consolidação Pura", style=columns, color=orange)
+plot(close <= out and close <= out1 and close >= out2 or close >= out and close >= out1 and close <= out2, title="Consolidação Grande", style=columns, color=blue)

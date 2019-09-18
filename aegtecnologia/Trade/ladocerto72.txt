@@ -1,0 +1,19 @@
+study(title="Indicador Tendencia EMA72 - MrBob", shorttitle="EMA72 Color", overlay=true)
+
+//emaplot = input (true, title="Mostrar EMA no Chart")
+len72 = input(72, minval=1, title="Você EMA")
+len17 = input(17, minval=1, title="Irmão Menor EMA")
+len305 = input(305, minval=1, title="Irmã Maior EMA")
+src = close
+out72 = ema(src, len72)
+out17 = ema(src, len17)
+out305 = ema(src, len305)
+up = out72 > out72[1]
+down = out72 < out72[1]
+mycolor = up ? green : down ? red : blue
+plot(out72 ? out72 :na , title="EMA 72", color=mycolor, linewidth=5)
+plot(out17 ? out17 :na , title="EMA 17", color=fuchsia, linewidth=5)
+plot(out305 ? out305 :na , title="EMA 305", color=blue, linewidth=5)
+//plot(out72 and emaplot ? out72 :na , title="EMA", color=mycolor, linewidth=5)
+barcolor(close > ema(close, len72) ? green : red)
+//bgcolor(close > ema(close, len72) ? green : red)
