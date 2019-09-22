@@ -1,0 +1,19 @@
+Anderson, boa tarde.
+
+Segue o teste .Net. Geralmente, os candidatos levam de 03 a 04 horas.
+ 
+Seguem as informações da VM no Azure:
+ 
+Ip: 40.113.230.39
+Usuario: antlia
+Senha: s$mZS#suC8b3`&Q8
+ 
+SQL
+Login: candidato
+Senha: candidato123 
+ 
+
+fabio.tavares@antlia.com.br
+
+angular
+https://www.youtube.com/watch?v=UNkqooT1x8E

@@ -1,0 +1,14 @@
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\bin\Debug\netcoreapp2.1\Antlia.MovManual.Api.deps.json
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\bin\Debug\netcoreapp2.1\Antlia.MovManual.Api.runtimeconfig.json
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\bin\Debug\netcoreapp2.1\Antlia.MovManual.Api.runtimeconfig.dev.json
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\bin\Debug\netcoreapp2.1\Antlia.MovManual.Api.dll
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\bin\Debug\netcoreapp2.1\Antlia.MovManual.Api.pdb
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.csprojAssemblyReference.cache
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.csproj.CoreCompileInputs.cache
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.RazorAssemblyInfo.cache
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.RazorAssemblyInfo.cs
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.AssemblyInfoInputs.cache
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.AssemblyInfo.cs
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.RazorTargetAssemblyInfo.cache
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.dll
+C:\Anderson\Antlia\Projeto\api\Antlia.MovManual\Antlia.MovManual.Api\obj\Debug\netcoreapp2.1\Antlia.MovManual.Api.pdb
