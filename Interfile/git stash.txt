@@ -1,6 +1,0 @@
-git stash clear
-git stash pop [id]
-git stash list
-git stash apply
-git stash push ????
-git stash

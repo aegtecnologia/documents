@@ -1,2 +1,0 @@
-############# Bitwise #############################
-https://www.alanzucconi.com/2015/07/26/enum-flags-and-bitwise-operators/

@@ -1,0 +1,5 @@
+https://www.toolsqa.com/selenium-c-sharp/
+
+https://github.com/tdlib/td
+
+https://medium.com/@renato.groffe/testando-aplica%C3%A7%C3%B5es-web-com-selenium-webdriver-net-core-2-0-net-standard-2-0-e-xunit-b85bd8713933

@@ -1,4 +1,0 @@
-referencias:
-
-https://medium.com/@alexalves_85598/publicando-aplica%C3%A7%C3%A3o-net-core-no-iss-f4079c2f312
-https://docs.microsoft.com/pt-br/aspnet/core/host-and-deploy/iis/?view=aspnetcore-2.2

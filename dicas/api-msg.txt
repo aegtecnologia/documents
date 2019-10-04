@@ -1,0 +1,16 @@
+[fornecedor de api]
+https://api.chatpro.com.br/?gclid=CjwKCAjwm4rqBRBUEiwAwaWjjPUrnMQBfEWKlpOtN6vEoPtznz3gMOIw5-FD5DrEjyZgrw9cQbT71hoC_eQQAvD_BwE
+
+[empresas parceiras do face (ex: zendesk)
+https://www.facebook.com/business/partner-directory/search?platforms=whatsapp&solution_type=messaging
+
+[telegram git]
+https://github.com/tdlib/td/blob/master/example/csharp/TdExample.cs
+
+[tuto telegram]
+https://core.telegram.org/api/obtaining_api_id
+
+[my telegram]
+https://my.telegram.org
+
+https://core.telegram.org/api#api-methods

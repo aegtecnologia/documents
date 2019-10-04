@@ -1,5 +1,0 @@
-excell;
-https://github.com/ClosedXML/ClosedXML
-
-fluent ftp
-https://www.nuget.org/packages/FluentFTP

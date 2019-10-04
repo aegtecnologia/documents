@@ -1,0 +1,14 @@
+referencias:
+https://www.devmedia.com.br/entity-framework-core-criando-bases-de-dados-com-migrations/36776
+https://medium.com/@speedforcerun/implementing-idesigntimedbcontextfactory-in-asp-net-core-2-0-2-1-3718bba6db84
+
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+dicas - migrations
+Enable-Migrations: Enables Code First Migrations in a project.
+Add-Migration: Scaffolds a migration script for any pending model changes.
+Update-Database: Applies any pending migrations to the database.
+Get-Migrations: Displays the migrations that have been applied to the target database.

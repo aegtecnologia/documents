@@ -1,6 +1,0 @@
- var configuration = services.BuildServiceProvider().GetService<IConfiguration>();
-configuration.GetConnectionString("DefaultConnection");
-
-"ConnectionStrings": {
-    "DefaultConnection": "Data Source=(local);Initial Catalog=db_credcesta;Integrated Security=True;MultipleActiveResultSets=True"
-  },

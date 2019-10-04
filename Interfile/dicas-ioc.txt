@@ -1,6 +1,0 @@
-Scrutor:
-https://andrewlock.net/using-scrutor-to-automatically-register-your-services-with-the-asp-net-core-di-container/
-
-Basico:
-http://www.macoratti.net/17/04/aspcore_di1.htm
-

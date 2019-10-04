@@ -1,0 +1,9 @@
+[dica git]
+git fetch origin
+git remote prune origin
+git checkout [branch]
+git push -u origin [branch]
+
+[dica cron]
+https://crontab.guru/	
+
