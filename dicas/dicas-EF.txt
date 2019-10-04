@@ -9,3 +9,6 @@ https://www.devmedia.com.br/entity-framework-core-criando-bases-de-dados-com-mig
 
 [1 to n]
 http://www.entityframeworktutorial.net/efcore/configure-one-to-many-relationship-using-fluent-api-in-ef-core.aspx
+
+[generic repository]
+http://www.linhadecodigo.com.br/artigo/3370/entity-framework-4-repositorio-generico.aspx
