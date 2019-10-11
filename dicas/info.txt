@@ -7,3 +7,5 @@ git push -u origin [branch]
 [dica cron]
 https://crontab.guru/	
 
+https://www.mql5.com/pt/articles/5563
+https://www.mql5.com/pt/articles/6549
